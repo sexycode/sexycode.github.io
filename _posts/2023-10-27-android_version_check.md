@@ -7,9 +7,8 @@ categories:
 tags:
    - Blog
 ---
-
-
 - android version check   
+
    1. 12/maincore/build/core/version_defaults.mk
      PLATFORM_SDK_VERSION := 31  , PLATFORM_VERSION_LAST_STABLE := 12
    2. 13/maincore/build/core/version_defaults.mk
