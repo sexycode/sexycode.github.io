@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2023-10-28T14:59:49+09:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">My Life,Love,Values</title><subtitle>An amazing website.</subtitle><author><name>sexycode</name></author><entry><title type="html">Android Source Version check</title><link href="http://0.0.0.0:4000/blog/android_version_check/" rel="alternate" type="text/html" title="Android Source Version check" /><published>2023-10-27T00:00:00+09:00</published><updated>2023-10-27T00:00:00+09:00</updated><id>http://0.0.0.0:4000/blog/android_version_check</id><content type="html" xml:base="http://0.0.0.0:4000/blog/android_version_check/"><![CDATA[<ul>
+  <li>
+    <p>android version check</p>
+
+    <ol>
+      <li>12/maincore/build/core/version_defaults.mk
+   PLATFORM_SDK_VERSION := 31  , PLATFORM_VERSION_LAST_STABLE := 12</li>
+      <li>13/maincore/build/core/version_defaults.mk
+```
+        <h1 id="this-is-the-user-visible-version--in-a-final-release-build-it-should">This is the user-visible version.  In a final release build it should</h1>
+        <h1 id="be-empty-to-use-platform_version-as-the-user-visible-version--for">be empty to use PLATFORM_VERSION as the user-visible version.  For</h1>
+        <h1 id="a-preview-release-it-can-be-set-to-a-user-friendly-value-like-12-preview-1">a preview release it can be set to a user-friendly value like <code class="language-plaintext highlighter-rouge">12 Preview 1</code></h1>
+        <p>PLATFORM_DISPLAY_VERSION := 13</p>
+      </li>
+    </ol>
+  </li>
+</ul>
+
+<p>ifndef PLATFORM_SDK_VERSION
+  # This is the canonical definition of the SDK version, which defines
+  # the set of APIs and functionality available in the platform.  It
+  # is a single integer that increases monotonically as updates to
+  # the SDK are released.  It should only be incremented when the APIs for
+  # the new release are frozen (so that developers don’t write apps against
+  # intermediate builds).  During development, this number remains at the
+  # SDK version the branch is based on and PLATFORM_VERSION_CODENAME holds
+  # the code-name of the new development work.</p>
+
+<p># When you increment the PLATFORM_SDK_VERSION please ensure you also
+  # clear out the following text file of all older PLATFORM_VERSION’s:
+  # cts/tests/tests/os/assets/platform_versions.txt
+  PLATFORM_SDK_VERSION := 33
+endif</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- aosp 최신버전
+</code></pre></div></div>
+<p>shkim@shkim-desktop(1254433.aosp:0):~/work/aosp/.repo/manifests$ pwd
+/home/shkim/work/aosp/.repo/manifests
+shkim@shkim-desktop(1254433.aosp:0):~/work/aosp/.repo/manifests$ git branch -v</p>
+<ul>
+  <li>default 695764ec1 Merge Android 14.
+```</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>PLATFORM_VERSION_LAST_STABLE := 14
+.KATI_READONLY := PLATFORM_VERSION_LAST_STABLE
+
+# These are the current development codenames, if the build is not a final
+# release build.  If this is a final release build, it is simply "REL".
+# Note that this may be overridden by RELEASE_VERSION_CODENAME_REL in
+# version_util.mk.
+PLATFORM_VERSION_CODENAME.UP1A := UpsideDownCake
+PLATFORM_VERSION_CODENAME.VP1A := VanillaIceCream
+
+# This is the user-visible version.  In a final release build it should
+# be empty to use PLATFORM_VERSION as the user-visible version.  For
+# a preview release it can be set to a user-friendly value like `12 Preview 1`
+PLATFORM_DISPLAY_VERSION :=
+
+ifndef PLATFORM_SDK_VERSION
+  # This is the canonical definition of the SDK version, which defines
+  # the set of APIs and functionality available in the platform.  It
+  # is a single integer that increases monotonically as updates to
+  # the SDK are released.  It should only be incremented when the APIs for
+  # the new release are frozen (so that developers don't write apps against
+  # intermediate builds).  During development, this number remains at the
+  # SDK version the branch is based on and PLATFORM_VERSION_CODENAME holds
+  # the code-name of the new development work.
+
+  # When you increment the PLATFORM_SDK_VERSION please ensure you also
+  # clear out the following text file of all older PLATFORM_VERSION's:
+  # cts/tests/tests/os/assets/platform_versions.txt
+  PLATFORM_SDK_VERSION := 34
+endif
+</code></pre></div></div>]]></content><author><name>sexycode</name></author><category term="Blog" /><category term="Blog" /><summary type="html"><![CDATA[android version check]]></summary></entry></feed>

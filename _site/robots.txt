@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sexycode.github.io/sitemap.xml
