@@ -289,7 +289,6 @@ defaults:
       share: true
       related: true
 
-
 gallery:
   dir: photos               # Path to the gallery
   symlink: false            # false: copy images into _site. true: create symbolic links (saves disk space)
@@ -303,7 +302,10 @@ gallery:
   # The following options are for individual galleries.
   galleries:
     soomin_jo:
-      best_image:  2021-12-25_05-03-09_UTC.jpg  # The image to show on the gallery index page. Defaults to the last image.
+      best_image: 2021-12-25_05-03-09_UTC.jpg  # The image to show on the gallery index page. Defaults to the last image.
+    japan_trip:
+      best_image: IMG_0690.JPG
+      name: "日本の旅"       # Defaults to directory name, replacing _ with spaces & capitalizing words.
     awesome_stuff:
       best_image: snaileo_gonzales.jpg
       sort_reverse: true    # Reverse sort images in gallery.
