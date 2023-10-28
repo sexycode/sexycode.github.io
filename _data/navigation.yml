@@ -1,7 +1,7 @@
 # main links
 main:
   - title: "Photo"
-    url: /photos/index.html
+    url: /_site/photo/
   # - title: "About"
   #   url: https://mmistakes.github.io/minimal-mistakes/about/
   # - title: "Sample Posts"
