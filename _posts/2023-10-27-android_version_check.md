@@ -11,7 +11,8 @@ tags:
 
    1. 12/maincore/build/core/version_defaults.mk
      PLATFORM_SDK_VERSION := 31  , PLATFORM_VERSION_LAST_STABLE := 12
-   2. 13/maincore/build/core/version_defaults.mk
+   2. 13/maincore/build/core/version_defaults.mk  
+
 ```
 # This is the user-visible version.  In a final release build it should
 # be empty to use PLATFORM_VERSION as the user-visible version.  For
@@ -34,12 +35,14 @@ ifndef PLATFORM_SDK_VERSION
   PLATFORM_SDK_VERSION := 33
 endif
 ```
-- aosp 최신버전
+- aosp 최신버전  
+
 ```
 shkim@shkim-desktop(1254433.aosp:0):~/work/aosp/.repo/manifests$ pwd
 /home/shkim/work/aosp/.repo/manifests
 shkim@shkim-desktop(1254433.aosp:0):~/work/aosp/.repo/manifests$ git branch -v
-* default 695764ec1 Merge Android 14.
+* default 695764ec1 Merge Android 14.  
+
 ```
 
 ```
