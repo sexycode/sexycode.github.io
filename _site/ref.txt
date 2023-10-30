@@ -1,0 +1,6 @@
+https://github.com/eoli3n/eoli3n.github.io#install
+
+https://surdu.me/2020/02/04/jekyll-git-hook.html
+
+
+https://github.com/ggreer/jekyll-gallery-generator/issues/44
