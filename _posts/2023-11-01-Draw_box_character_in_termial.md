@@ -38,3 +38,4 @@ tput rmacs
 
 
 - https://www.tecmint.com/boxes-draws-ascii-art-boxes-in-linux-terminal/
+- https://github.com/piotrmurach/tty-box
