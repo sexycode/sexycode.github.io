@@ -11,9 +11,11 @@ then
     exit 1
 fi
 
-FILENAME="`date "+%Y-%m-%d"`-$1.md"
+TITLE=$1
+_fname="${TITLE// /_}"
+FILENAME="`date "+%Y-%m-%d"`-$_fname.md"
 SNIP="---
-title : \"Android source Version check\"
+title : \"$TITLE\"
 #excerpt : \"\"
 
 categories:
@@ -21,7 +23,7 @@ categories:
 tags:
    - Blog
 ---
-New Post 새로운 시작
+
 "
 echo "$SNIP" | tr -s '[:blank:]'
 echo "$SNIP"  > $FILENAME
